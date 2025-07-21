@@ -7,11 +7,13 @@
 
 <script lang="ts">
 import NavBar from './components/navBar.vue';
+import welcomeBrand from './components/home/welcomeBrand.vue';
 
 export default {
   name: 'App',
   components: {
     navbar: NavBar,
+    timecount: welcomeBrand
   },
   data() {
     return {};
@@ -25,9 +27,12 @@ export default {
 
 <style>
 .app-container {
-  width: 100%;
-  height: 100vh;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #F6F5F3; /* Fondo blanco para efecto de card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   color: #000;
-  background-color: #d8d8d8; /* Light background color */
 }
+
 </style>

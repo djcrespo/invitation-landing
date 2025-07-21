@@ -1,14 +1,14 @@
 <template>
-  <nav class="bg-white w-screen h-16">
+  <nav class="w-full h-16">
     <div class="columns-3 h-full">
       <div class="text-center h-full flex items-center justify-center">
-        <p class="text-black">Bienvenido</p>
+        <p class="text-black outfit">Bienvenido</p>
       </div>
       <div class="text-center h-full flex items-center justify-center">
-        <p class="text-black">Didier & Mari</p>
+        <p class="text-black cedarville-cursive-regular text-4xl">Didier & Mari</p>
       </div>
       <div class="text-center h-full flex items-center justify-center">
-        <p class="text-black">Confirmar asistencia</p>
+        <p class="text-black outfit">Confirmar asistencia</p>
       </div>
     </div>
   </nav>
@@ -21,7 +21,6 @@ export default {
     return {}
   },
   mounted() {
-    console.log('Hello component')
   },
   methods: {},
 }
