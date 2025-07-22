@@ -1,6 +1,7 @@
 <template>
   <div class="app-container">
     <navbar />
+    <timecount />
     <router-view />
   </div>
 </template>

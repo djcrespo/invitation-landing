@@ -15,7 +15,58 @@
 }
 
 
+.edu-nsw-act-cursive {
+  font-family: "Edu NSW ACT Cursive", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 #app {
   width: 100%;
   height: 100vh;
+}
+
+.boda-verde {
+  background-color: #A3B18A;
+}
+
+.boda-verde:hover {
+  background-color: #6D7D5D;
+}
+
+.text-boda-verde {
+  color: #A3B18A;
+}
+
+.boda-oliva {
+  background-color: #8B9B70;
+}
+
+.text-boda-oliva {
+  color: #8B9B70;
+}
+
+.boda-dorado {
+  background-color: #D6B984;
+}
+
+.text-boda-dorado {
+  color: #D6B984;
+}
+
+.boda-marfil {
+  background-color: #F6F5F3;
+}
+
+.text-boda-marfil {
+  color: #F6F5F3;
+}
+
+.boda-eucalipto {
+  background-color: #6D7D5D;
+}
+
+.text-boda-eucalipto {
+  color: #6D7D5D;
 }

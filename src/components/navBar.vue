@@ -2,13 +2,19 @@
   <nav class="w-full h-16">
     <div class="columns-3 h-full">
       <div class="text-center h-full flex items-center justify-center">
-        <p class="text-black outfit">Bienvenido</p>
+        <p class="text-black outfit text-2xl">Bienvenido</p>
       </div>
       <div class="text-center h-full flex items-center justify-center">
-        <p class="text-black cedarville-cursive-regular text-4xl">Didier & Mari</p>
+        <p class="text-black edu-nsw-act-cursive text-4xl">Didier & Mari</p>
       </div>
       <div class="text-center h-full flex items-center justify-center">
-        <p class="text-black outfit">Confirmar asistencia</p>
+        <button
+          class="boda-verde text-white py-2 px-4 rounded-full outfit text-xl"
+          @click="sendConfirmation"
+        >
+          Enviar confirmación
+        </button>
+
       </div>
     </div>
   </nav>
@@ -16,12 +22,16 @@
 
 <script lang="ts">
 export default {
-  name: 'App',
+  name: 'NavBar',
   data() {
     return {}
   },
   mounted() {
   },
-  methods: {},
+  methods: {
+    sendConfirmation () {
+      console.log("Hola mundo")
+    }
+  },
 }
 </script>

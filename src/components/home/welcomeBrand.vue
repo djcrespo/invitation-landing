@@ -1,22 +1,22 @@
 <template>
-  <div class="flex flex-col items-center justify-center min-h-screen bg-white text-gray-800">
-    <h1 class="text-3xl font-semibold mb-6">¡Faltan para nuestra boda!</h1>
-    <div class="flex space-x-4 text-center text-2xl font-bold">
-      <div class="bg-green-100 text-green-800 px-4 py-2 rounded-2xl shadow">
+  <div class="flex flex-col items-center justify-center p-2 text-gray-800">
+    <h1 class="edu-nsw-act-cursive text-4xl p-4">¡Faltan para nuestra boda!</h1>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-2xl font-bold py-3">
+      <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow">
         <div>{{ time.days }}</div>
-        <span class="text-sm font-normal">Días</span>
+        <span class="text-sm font-normal outfit">Días</span>
       </div>
-      <div class="bg-green-100 text-green-800 px-4 py-2 rounded-2xl shadow">
+      <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow outfit">
         <div>{{ time.hours }}</div>
-        <span class="text-sm font-normal">Horas</span>
+        <span class="text-sm font-normal outfit">Horas</span>
       </div>
-      <div class="bg-green-100 text-green-800 px-4 py-2 rounded-2xl shadow">
+      <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow outfit">
         <div>{{ time.minutes }}</div>
-        <span class="text-sm font-normal">Minutos</span>
+        <span class="text-sm font-normal outfit">Minutos</span>
       </div>
-      <div class="bg-green-100 text-green-800 px-4 py-2 rounded-2xl shadow">
+      <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow outfit">
         <div>{{ time.seconds }}</div>
-        <span class="text-sm font-normal">Segundos</span>
+        <span class="text-sm font-normal outfit">Segundos</span>
       </div>
     </div>
   </div>
@@ -25,7 +25,7 @@
 <script lang="ts">
 export default {
   name: 'WelcomeBrand',
-  data () {
+  data() {
     return {
       targetDate: new Date('2025-12-26T21:00:00'),
       time: {
@@ -37,12 +37,12 @@ export default {
       intervalTime: null as number | null
     }
   },
-  mounted () {
+  mounted() {
     this.updateDate()
     this.intervalTime = setInterval(this.updateDate, 1000)
   },
   methods: {
-    updateDate () {
+    updateDate() {
       const now = new Date()
       const diff = this.targetDate.getTime() - now.getTime()
 
