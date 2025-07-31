@@ -6,9 +6,9 @@
         minima explicabo nisi nulla inventore, libero facere velit enim nesciunt animi illo, consequatur amet impedit
         voluptatum.
       </p>
-    </div>
-    <div class="bg-boda-verde text-boda-marfil">
-      ¡Nos casamos!
+      <p>
+        
+      </p>
     </div>
   </div>
 </template>
