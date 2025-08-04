@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-container" :style="`background-image: url(${background}); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #f0f0f0;`">
     <navbar />
     <timecount />
     <router-view />
@@ -9,6 +9,7 @@
 <script lang="ts">
 import NavBar from './components/navBar.vue';
 import welcomeBrand from './components/home/welcomeBrand.vue';
+import fondoFlores from '@/assets/fondoplantas.jpg'
 
 export default {
   name: 'App',
@@ -17,7 +18,9 @@ export default {
     timecount: welcomeBrand
   },
   data() {
-    return {};
+    return {
+      background: fondoFlores
+    };
   },
   mounted() {
     console.log('App mounted')

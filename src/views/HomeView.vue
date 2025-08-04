@@ -1,21 +1,17 @@
 <template>
-  <div class="h-16 w-full text-center">
-    <div class="w-full">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore nobis consectetur blanditiis asperiores officia
-        minima explicabo nisi nulla inventore, libero facere velit enim nesciunt animi illo, consequatur amet impedit
-        voluptatum.
-      </p>
-      <p>
-        
-      </p>
-    </div>
+  <div class="card w-full text-center">
+    <principal-card />
   </div>
 </template>
 
 <script lang="ts">
+import PrincipalCard from '@/components/home/PrincipalCard.vue';
+
 export default {
   name: 'HomeView',
+  components: {
+    PrincipalCard
+  },
   data() {
     return {}
   },

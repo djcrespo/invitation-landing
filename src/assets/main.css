@@ -70,3 +70,12 @@
 .text-boda-eucalipto {
   color: #6D7D5D;
 }
+
+.card {
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #F6F5F3; /* Fondo blanco para efecto de card */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #000;
+}
