@@ -1,27 +1,31 @@
 <template>
-  <div style="min-height: 50vh;">
-    <div class="flex flex-col items-center justify-center p-2 text-gray-800" style="height: 50vh">
-      <h1 class="edu-nsw-act-cursive text-4xl p-4">¡Faltan para nuestra boda!</h1>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-2xl font-bold py-3">
-        <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow">
+  <div class="min-h-[10vh] lg:min-h-[40vh]">
+    <div class="min-h-[10vh] lg:min-h-[40vh] flex flex-col items-center justify-center w-full lg:p-2 text-center text-gray-800">
+      <h1 class="edu-nsw-act-cursive text-2xl lg:text-4xl p-4">¡Faltan para nuestra boda!</h1>
+      <div class="grid grid-cols-4 lg:grid-cols-4 gap-4 text-center text-2xl font-bold py-3">
+        <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow text-center">
           <div>{{ time.days }}</div>
-          <span class="text-sm font-normal outfit">Días</span>
+          <span class="hidden lg:block text-[20px] font-normal gidole-regular">Días</span>
+          <span class="block lg:hidden text-[20px] font-normal gidole-regular">D</span>
         </div>
-        <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow outfit">
+        <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow gidole-regular text-center">
           <div>{{ time.hours }}</div>
-          <span class="text-sm font-normal outfit">Horas</span>
+          <span class="hidden lg:block text-[20px] font-normal gidole-regular">Horas</span>
+          <span class="block lg:hidden text-[20px] font-normal gidole-regular">H</span>
         </div>
-        <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow outfit">
+        <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow gidole-regular text-center">
           <div>{{ time.minutes }}</div>
-          <span class="text-sm font-normal outfit">Minutos</span>
+          <span class="hidden lg:block text-[20px] font-normal gidole-regular">Minutos</span>
+          <span class="block lg:hidden text-[20px] font-normal gidole-regular">M</span>
         </div>
-        <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow outfit">
+        <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow gidole-regular text-center">
           <div>{{ time.seconds }}</div>
-          <span class="text-sm font-normal outfit">Segundos</span>
+          <span class="hidden lg:block text-[20px] font-normal gidole-regular">Segundos</span>
+          <span class="block lg:hidden text-[20px] font-normal gidole-regular">S</span>
         </div>
       </div>
       <button
-          class="boda-verde text-white py-2 px-4 rounded-full outfit text-xl"
+          class="boda-verde text-white py-2 px-4 rounded-full gidole-regular text-xl"
           style="cursor: pointer;"
           @click="sendConfirmation"
         >

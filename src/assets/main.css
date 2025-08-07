@@ -1,5 +1,6 @@
 @import './base.css';
 @import "tailwindcss";
+@import "tailwindcss-animated";
 
 .cedarville-cursive-regular {
   font-family: "Cedarville Cursive", cursive;
@@ -14,11 +15,16 @@
   font-style: normal;
 }
 
-
 .edu-nsw-act-cursive {
   font-family: "Edu NSW ACT Cursive", cursive;
   font-optical-sizing: auto;
   font-weight: 500;
+  font-style: normal;
+}
+
+.gidole-regular {
+  font-family: "Gidole", sans-serif;
+  font-weight: 400;
   font-style: normal;
 }
 

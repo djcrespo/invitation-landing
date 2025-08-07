@@ -1,7 +1,7 @@
 <template>
   <div class="app-container" :style="`background-image: url(${background}); background-size: cover; background-position: center; background-repeat: no-repeat; background-color: #f0f0f0;`">
     <navbar />
-    <timecount />
+    <timecount class="animate-fade animate-delay-200" />
     <router-view />
   </div>
 </template>
