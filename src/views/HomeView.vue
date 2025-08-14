@@ -2,18 +2,24 @@
   <div>
     <principal-banner class="animate-fade-up animate-delay-[500ms] animate-ease-in" />
     <info-card class="animate-fade-up animate-delay-[700ms] animate-ease-in" />
+    <gifts-information class="animate-fade-up animate-delay-[900ms] animate-ease-in" />
+    <confirm-invitation class="animate-fade-up animate-delay-[1200ms] animate-ease-in" />
   </div>
 </template>
 
 <script lang="ts">
 import PrincipalBanner from '@/components/home/PrincipalBanner.vue';
 import InfoCard from '@/components/home/InfoCard.vue';
+import GiftsInformation from '@/components/home/giftsInformation.vue';
+import ConfirmInvitation from '@/components/home/ConfirmInvitation.vue';
 
 export default {
   name: 'HomeView',
   components: {
     PrincipalBanner,
-    InfoCard
+    InfoCard,
+    GiftsInformation,
+    ConfirmInvitation
   },
   data() {
     return {}
