@@ -8,12 +8,6 @@
         <p class="text-black edu-nsw-act-cursive lg:text-4xl md:text-4xl">Didier & Mari</p>
       </div>
       <div class="hidden lg:block text-center h-full flex items-center justify-center">
-        <!-- <button
-          class="boda-verde text-white py-2 px-4 rounded-full outfit text-xl"
-          @click="sendConfirmation"
-        >
-          Enviar confirmación
-        </button> -->
       </div>
     </div>
   </nav>

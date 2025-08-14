@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-[10vh] lg:min-h-[40vh]">
-    <div class="min-h-[10vh] lg:min-h-[40vh] flex flex-col items-center justify-center w-full lg:p-2 text-center text-gray-800">
+  <div class="">
+    <div class="md:min-h-[10vh] lg:min-h-[30vh] flex flex-col items-center justify-center w-full lg:p-2 text-center text-gray-800">
       <h1 class="edu-nsw-act-cursive text-2xl lg:text-4xl p-4">¡Faltan para nuestra boda!</h1>
       <div class="grid grid-cols-4 lg:grid-cols-4 gap-4 text-center text-2xl font-bold py-3">
         <div class="boda-verde text-boda-marfil px-4 py-2 rounded-2xl shadow text-center">

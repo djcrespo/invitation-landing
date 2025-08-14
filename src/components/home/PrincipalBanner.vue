@@ -1,12 +1,17 @@
 <template>
   <div class="card">
-    <div class="columns-1 lg:columns-2">
-      <div>
-        <img style="border-radius: 15px;" width="100%" height="auto" :src="img" alt="imagen1" />
+    <div class="w-full text-center p-4">
+      <h1 class="text-3xl md:text-2xl lg:text-5xl edu-nsw-act-cursive">¡Nos casamos!</h1>
+      <h2 class="text-xl gidole-regular">Y estás invitado(a)</h2>
+    </div>
+    <div class="grid lg:grid-cols-3 gap-4">
+      <div class="w-full py-3 flex items-center justify-center">
+        <img class="lg:w-[80%]" style="border-radius: 15px;" height="auto" :src="img1" alt="imagen1" />
       </div>
-      <div class="p-4 text-justify">
+      <div class="p-4 text-justify flex flex-col justify-center">
         <p class="gidole-regular text-xl">
-          Nos sentimos profundamente agradecidos por contar con su presencia en uno de los días más importantes de nuestras vidas.
+          Nos sentimos profundamente agradecidos por contar con su presencia en uno de los días más importantes de
+          nuestras vidas.
           Compartir este momento con ustedes, nuestras personas queridas, lo hace aún más especial e inolvidable.
         </p>
         <br>
@@ -15,23 +20,29 @@
           ¡Esperamos que disfruten esta celebración tanto como nosotros!
         </p>
         <br>
-        <p class="edu-nsw-act-cursive">
+        <p class="text-center edu-nsw-act-cursive">
           Con todo nuestro amor,
           Maria & Didier
         </p>
+      </div>
+      <div class="w-full py-3 flex items-center justify-center">
+        <img class="lg:w-[80%]" style="border-radius: 15px;" height="auto" :src="img2" alt="imagen1" />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import banner from '@/assets/banner.png'
+// import banner from '@/assets/banner.png'
+import img2 from '@/assets/images/principal4.jpg'
+import img3 from '@/assets/images/principal5.jpg'
 
 export default {
   name: "PrincipalBanner",
-  data () {
+  data() {
     return {
-      img: banner
+      img1: img2,
+      img2: img3
     }
   }
 }
