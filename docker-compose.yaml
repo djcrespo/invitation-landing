@@ -4,15 +4,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: invitation-landing
     restart: unless-stopped
     container_name: invitation-landing
     networks:
       - default
     environment:
-      - VIRTUAL_HOST=m&d.devcrespo.tech
+      - VIRTUAL_HOST=invitation.devcrespo.tech
       - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=m&d.devcrespo.tech
+      - LETSENCRYPT_HOST=invitation.devcrespo.tech
     expose:
       - 80
 

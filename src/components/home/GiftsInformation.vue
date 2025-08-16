@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-  </div>#F6F5F3
+  </div>
 </template>
 
 <script lang="ts">
