@@ -58,8 +58,9 @@ export default {
   },
   methods: {
     crearCita() {
-      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.hasOwnProperty("MSStream")
       const isAndroid = /Android/.test(navigator.userAgent);
+      const isMac = /Macintosh|MacIntel|MacPPC|Mac68K/.test(navigator.userAgent);
 
       const title = encodeURIComponent("Boda de María & Didier");
       const details = encodeURIComponent("¡Nos casamos! Te esperamos en nuestra boda.");

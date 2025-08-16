@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div class="max-w-4xl mx-auto py-8">
     <Carousel
       :items-to-show="1"
@@ -39,4 +39,4 @@ export default {
   },
   methods: {}
 }
-</script>
+</script> -->
