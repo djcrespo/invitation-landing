@@ -24,13 +24,6 @@
           <span class="block lg:hidden text-[20px] font-normal gidole-regular">S</span>
         </div>
       </div>
-      <button
-          class="boda-verde text-white py-2 px-4 rounded-full gidole-regular text-xl"
-          style="cursor: pointer;"
-          @click="sendConfirmation"
-        >
-          Enviar confirmación
-        </button>
     </div>
   </div>
 </template>
@@ -72,9 +65,6 @@ export default {
       } else {
         this.time = { days: 0, hours: 0, minutes: 0, seconds: 0 }
       }
-    },
-    sendConfirmation () {
-      console.log("Hola mundo")
     }
   }
 }

@@ -8,19 +8,19 @@
       <div class="w-full py-3 flex items-center justify-center">
         <img class="lg:w-[80%]" style="border-radius: 15px;" height="auto" :src="img1" alt="imagen1" />
       </div>
-      <div class="p-4 text-justify flex flex-col justify-center">
-        <p class="gidole-regular text-xl">
+      <div class="p-4 md:text-center text-center lg:text-justify flex flex-col justify-center">
+        <p class="gidole-regular text-xl lg:text-2xl">
           Nos sentimos profundamente agradecidos por contar con su presencia en uno de los días más importantes de
           nuestras vidas.
           Compartir este momento con ustedes, nuestras personas queridas, lo hace aún más especial e inolvidable.
         </p>
         <br>
-        <p class="gidole-regular text-xl">
+        <p class="gidole-regular text-xl lg:text-2xl">
           Gracias por su cariño, por su compañía y por ser parte de nuestra historia.
           ¡Esperamos que disfruten esta celebración tanto como nosotros!
         </p>
         <br>
-        <p class="text-center edu-nsw-act-cursive">
+        <p class="text-center edu-nsw-act-cursive lg:text-xl">
           Con todo nuestro amor,
           Maria & Didier
         </p>

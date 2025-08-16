@@ -10,7 +10,7 @@
 <script lang="ts">
 import PrincipalBanner from '@/components/home/PrincipalBanner.vue';
 import InfoCard from '@/components/home/InfoCard.vue';
-import GiftsInformation from '@/components/home/giftsInformation.vue';
+import GiftsInformation from '@/components/home/GiftsInformation.vue';
 import ConfirmInvitation from '@/components/home/ConfirmInvitation.vue';
 
 export default {

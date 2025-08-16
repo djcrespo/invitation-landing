@@ -14,7 +14,7 @@
           </div>
         </div>
         <div class="w-full py-2 flex items-center justify-center">
-          <button class="boda-verde text-white py-2 px-4 rounded-full gidole-regular outfit text-xl" @click="crearCita">
+          <button class="boda-verde text-white py-2 px-4 rounded-full gidole-regular outfit text-xl" style="cursor: pointer;" @click="crearCita">
             Agendar
           </button>
         </div>
@@ -37,7 +37,7 @@
     </div>
     <div class="w-full card">
       <h2 class="text-2xl font-bold py-4 text-center">Ubicación</h2>
-      <iframe class="lg:w-full lg:h-[700px] w-full h-[400px]"
+      <iframe class="lg:w-full lg:h-[90%] w-full h-[400px]"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5666.198927378314!2d-89.71434359389895!3d21.013850814326076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f560b78b9af98bb%3A0x9ad85a7fa8d10f51!2sVilla%20Gabriela!5e0!3m2!1sen!2smx!4v1754878418743!5m2!1sen!2smx"
         style="border:0;" allowfullscreen="false" loading="lazy" referrerpolicy="no-referrer-when-downgrade" />
     </div>
