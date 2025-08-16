@@ -1,10 +1,10 @@
 version: '3.8'
 services:
-  web:
-    image:
-      build:
-        context: .
-        dockerfile: Dockerfile
+  invitation-landing:
+    build:
+    context: .
+    dockerfile: Dockerfile
+    image: invitation-landing
     restart: unless-stopped
     container_name: invitation-landing
     networks:
