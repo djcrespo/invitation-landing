@@ -3,7 +3,7 @@
     <principal-banner class="animate-fade-up animate-delay-[500ms] animate-ease-in" />
     <info-card class="animate-fade-up animate-delay-[700ms] animate-ease-in" />
     <gifts-information class="animate-fade-up animate-delay-[900ms] animate-ease-in" />
-    <confirm-invitation class="animate-fade-up animate-delay-[1200ms] animate-ease-in" />
+    <confirm-invitation :id="id" class="animate-fade-up animate-delay-[1200ms] animate-ease-in" />
   </div>
 </template>
 
@@ -22,7 +22,9 @@ export default {
     ConfirmInvitation
   },
   data() {
-    return {}
+    return {
+      id: this.$route.params.id
+    }
   },
   methods: {}
 }
