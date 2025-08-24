@@ -26,6 +26,10 @@ export default {
       id: Array.isArray(this.$route.params.id) ? this.$route.params.id[0] || '' : this.$route.params.id || ''
     }
   },
+  mounted () {
+    document.title = 'Didier & Mari - Invitación'
+    // console.log(this.id)
+  },
   methods: {}
 }
 </script>
