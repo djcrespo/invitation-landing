@@ -4,7 +4,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm i
 COPY . .
-# ENV BASE_URL=https://customer-garvi.paramq.com/api/v1
 RUN npm run build
 
 # production stage
