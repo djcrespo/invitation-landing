@@ -28,7 +28,7 @@
 
               <!-- Contenido -->
               <div class="bg-white px-4 py-3 sm:px-6 max-h-[70vh] overflow-y-auto">
-                <p class="p-4 w-full text-center gidole-regular">Agradecemos que puedan acompañarnos a este día tan
+                <p class="p-4 w-full text-center text-black gidole-regular">Agradecemos que puedan acompañarnos a este día tan
                   especial para nosotros, pero igual entendemos que por alguna situación no puedan asistir, le pedimos
                   que responda lo más pronto posible para separar espacios.</p>
               </div>
@@ -39,7 +39,7 @@
                   v-model="message"
                   :maxlength="500"
                   ref="textarea"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-1 focus:ring-blue-700 focus:border-blue-700 resize-none overflow-hidden transition-colors duration-300"
+                  class="w-full text-black px-4 py-3 border border-gray-300 rounded-lg focus:ring-1 focus:ring-blue-700 focus:border-blue-700 resize-none overflow-hidden transition-colors duration-300"
                   placeholder="Escribe tu mensaje aquí..."
                   rows="3"
                 />
@@ -115,7 +115,7 @@ export default {
     size: {
       type: String,
       default: 'md',
-      validator: (value) => ['sm', 'md', 'lg', 'xl', 'full'].includes(value)
+      validator: (value: string) => ['sm', 'md', 'lg', 'xl', 'full'].includes(value)
     },
     closeOnOverlayClick: {
       type: Boolean,
@@ -129,14 +129,14 @@ export default {
   emits: ['update:modelValue', 'close'],
   computed: {
     modalWidth() {
-      const sizes = {
+      const sizes: Record<'sm' | 'md' | 'lg' | 'xl' | 'full', string> = {
         sm: 'sm:max-w-sm',
         md: 'sm:max-w-md',
         lg: 'sm:max-w-lg',
         xl: 'sm:max-w-xl',
         full: 'sm:max-w-full mx-4'
       }
-      return sizes[this.size]
+      return sizes[this.size as 'sm' | 'md' | 'lg' | 'xl' | 'full']
     }
   },
   data () {
@@ -146,7 +146,7 @@ export default {
     }
   },
   methods: {
-    async closeModal(accepted: boolean) {
+    async closeModal(accepted: boolean | null = null) {
       if (accepted == true || accepted == false) {
         await this.sendResponse(accepted)
         this.message = ""
@@ -162,7 +162,7 @@ export default {
         this.closeModal()
       }
     },
-    handleEscapeKey(event) {
+    handleEscapeKey(event: KeyboardEvent) {
       if (this.closeOnEscape && event.key === 'Escape' && this.modelValue) {
         this.closeModal()
       }
@@ -174,8 +174,8 @@ export default {
         message: this.message.trim()
       }
       try {
-        await axios.post(`https://invitation-api.devcrespo.tech/invitations/${this.id}/confirm/`, response)
-        // await axios.post(`http://localhost:8000/api/v1/invitations/${this.id}/confirm/`, response)
+        // await axios.post(`https://invitation-api.devcrespo.tech/invitations/${this.id}/confirm/`, response)
+        await axios.post(`http://localhost:8000/api/v1/invitations/${this.id}/confirm/`, response)
         this.isLoading = false
       } catch (error) {
         this.isLoading = false

@@ -2,7 +2,7 @@
   <div class="w-full">
     <BaseModal
       v-model="showBasicModal"
-      :id="id"
+      :id="idInvitation"
       title="Confirma tu asistencia"
       @close="(value) => { if (value) showAlert() }"
     />
@@ -37,7 +37,7 @@ import AlertModal from '@/components/home/AlertModal.vue';
 export default {
   name: "ConfirmInvitation",
   props: {
-    id: {
+    idInvitation: {
       type: String,
       default: ''
     }

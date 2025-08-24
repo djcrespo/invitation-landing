@@ -3,7 +3,7 @@
     <principal-banner class="animate-fade-up animate-delay-[500ms] animate-ease-in" />
     <info-card class="animate-fade-up animate-delay-[700ms] animate-ease-in" />
     <gifts-information class="animate-fade-up animate-delay-[900ms] animate-ease-in" />
-    <confirm-invitation :id="id" class="animate-fade-up animate-delay-[1200ms] animate-ease-in" />
+    <confirm-invitation :id-invitation="id" class="animate-fade-up animate-delay-[1200ms] animate-ease-in" />
   </div>
 </template>
 
@@ -23,7 +23,7 @@ export default {
   },
   data() {
     return {
-      id: this.$route.params.id
+      id: Array.isArray(this.$route.params.id) ? this.$route.params.id[0] || '' : this.$route.params.id || ''
     }
   },
   methods: {}

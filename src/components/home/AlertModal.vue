@@ -16,7 +16,7 @@
 
               <!-- Contenido -->
               <div class="bg-white px-4 py-3 sm:px-6 max-h-[70vh] overflow-y-auto">
-                <p class="p-4 w-full text-center gidole-regular">
+                <p class="p-4 w-full text-black text-center gidole-regular">
                   Gracias por tu respuesta! no pierdas esta invitación porque por este medio daremos nuevas noticias y sorpresas, gracias por tu tiempo.
                 </p>
               </div>
@@ -60,7 +60,7 @@ export default {
     size: {
       type: String,
       default: 'md',
-      validator: (value) => ['sm', 'md', 'lg', 'xl', 'full'].includes(value)
+      validator: (value: string) => ['sm', 'md', 'lg', 'xl', 'full'].includes(value)
     },
     closeOnOverlayClick: {
       type: Boolean,
@@ -74,14 +74,14 @@ export default {
   emits: ['update:modelValue', 'close'],
   computed: {
     modalWidth() {
-      const sizes = {
+      const sizes: Record<'sm' | 'md' | 'lg' | 'xl' | 'full', string> = {
         sm: 'sm:max-w-sm',
         md: 'sm:max-w-md',
         lg: 'sm:max-w-lg',
         xl: 'sm:max-w-xl',
         full: 'sm:max-w-full mx-4'
       }
-      return sizes[this.size]
+      return sizes[this.size as 'sm' | 'md' | 'lg' | 'xl' | 'full']
     }
   },
   data () {
@@ -100,7 +100,7 @@ export default {
         this.closeModal()
       }
     },
-    handleEscapeKey(event) {
+    handleEscapeKey(event: KeyboardEvent) {
       if (this.closeOnEscape && event.key === 'Escape' && this.modelValue) {
         this.closeModal()
       }
