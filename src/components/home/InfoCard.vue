@@ -25,12 +25,18 @@
           <div class="w-full py-3 lg:py-0 flex flex-col items-center justify-center">
             <h2 class="gidole-regular text-xl">Hombres</h2>
             <img :src="imgHombre" alt="Hombres" />
-            <p>Traje o guayabera con pantalón de vestir</p>
           </div>
           <div class="w-full py-3 lg:py-0 flex flex-col items-center justify-center">
             <h2 class="gidole-regular text-xl">Mujeres</h2>
             <img :src="imgMujer" alt="Mujeres" />
-            <p>Vestido de noche</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2">
+          <div class="w-full py-3">
+            <p class="w-full text-center">Traje o guayabera con pantalón de vestir</p>
+          </div>
+          <div class="w-full py-3">
+            <p class="w-full text-center">Vestido de noche</p>
           </div>
         </div>
       </div>
