@@ -25,7 +25,7 @@
           <div class="w-full py-3 lg:py-0 flex flex-col items-center justify-center">
             <h2 class="gidole-regular text-xl">Hombres</h2>
             <img :src="imgHombre" alt="Hombres" />
-            <p>Traje o guayabera con pantalón</p>
+            <p>Traje o guayabera con pantalón de vestir</p>
           </div>
           <div class="w-full py-3 lg:py-0 flex flex-col items-center justify-center">
             <h2 class="gidole-regular text-xl">Mujeres</h2>
