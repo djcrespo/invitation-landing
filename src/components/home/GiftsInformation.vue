@@ -28,7 +28,7 @@
           </div>
           <div class="w-full py-2">
             <p class="gidole-regular text-lg lg:text-xl">CLABE interbancaria:</p>
-            <p>1234567890</p>
+            <p>722969010363434324</p>
           </div>
           <button class="boda-verde text-white py-2 px-4 rounded-full gidole-regular outfit text-xl"
             style="cursor: pointer;" @click="copyData">
@@ -55,7 +55,7 @@ export default {
       window.open("https://www.amazon.com.mx/wedding/registry/1CP8ZLIGCG8IB", "_blank")
     },
     copyData() {
-      const text = "Nombre: Didier Jesús Crespo Castilla\nBanco: Mercado Pago\nCLABE interbancaria: 1234567890";
+      const text = "Nombre: Didier Jesús Crespo Castilla\nBanco: Mercado Pago\nCLABE interbancaria: 722969010363434324";
       navigator.clipboard.writeText(text)
     }
   }
