@@ -174,7 +174,7 @@ export default {
         message: this.message.trim()
       }
       try {
-        await axios.post(`https://invitation-api.devcrespo.tech/api/v1/invitations/${this.id}/confirm/`, response)
+        await axios.post(`https://envetia-api.djcrespo.dev/api/v1/invitations/${this.id}/confirm/`, response)
         // await axios.post(`http://localhost:8000/api/v1/invitations/${this.id}/confirm/`, response)
         this.isLoading = false
       } catch (error) {
