@@ -19,12 +19,5 @@ export default {
   data() {
     return {}
   },
-  mounted() {
-  },
-  methods: {
-    sendConfirmation () {
-      console.log("Hola mundo")
-    }
-  },
 }
 </script>
