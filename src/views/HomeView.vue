@@ -34,7 +34,7 @@ export default {
   mounted () {
     document.title = 'Didier & Mari - Invitación'
     const now = new Date()
-    if (now.getDate() >= 25) {
+    if (now.getDate() >= 19) {
       this.showConfirmation = false
       this.showGallery = true
     }

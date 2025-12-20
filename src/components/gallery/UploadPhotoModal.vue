@@ -26,7 +26,8 @@
               <!-- Contenido -->
               <div class="bg-white px-4 py-3 sm:px-6 max-h-[70vh] overflow-y-auto">
                 <p class="p-4 w-full text-center text-black gidole-regular">
-                  Los nombramos fotógrafos y videógrafos oficiales de la fiesta. Capturen los momentos más espontáneos y auténticos, y compártanlos con nosotros subiendo sus archivos aquí.
+                  Los nombramos fotógrafos y videógrafos oficiales de la fiesta. Capturen los momentos más espontáneos y
+                  auténticos, y compártanlos con nosotros subiendo sus archivos aquí.
                 </p>
 
                 <!-- Opciones de captura -->
@@ -36,22 +37,16 @@
                     <!-- Foto con cámara -->
                     <div class="text-center">
                       <label class="block mb-2">
-                        <input
-                          ref="cameraPhotoInput"
-                          type="file"
-                          accept="image/*"
-                          capture="environment"
-                          class="hidden"
-                          @change="handleFileSelect"
-                        />
-                        <button
-                          type="button"
-                          @click="$refs.cameraPhotoInput.click()"
-                          class="w-full flex flex-col items-center justify-center gap-2 px-4 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all"
-                        >
+                        <input ref="cameraPhotoInput" type="file" accept="image/*" capture="environment" class="hidden"
+                          @change="handleFileSelect" />
+                        <button type="button" @click="triggerRef('cameraPhotoInput')"
+                          class="w-full flex flex-col items-center justify-center gap-2 px-4 py-4 bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-indigo-700 transition-all">
                           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
                           </svg>
                           <span class="text-sm">Tomar Foto</span>
                         </button>
@@ -62,21 +57,14 @@
                     <!-- Video con cámara -->
                     <div class="text-center">
                       <label class="block mb-2">
-                        <input
-                          ref="cameraVideoInput"
-                          type="file"
-                          accept="video/*"
-                          capture="environment"
-                          class="hidden"
-                          @change="handleFileSelect"
-                        />
-                        <button
-                          type="button"
-                          @click="$refs.cameraVideoInput.click()"
-                          class="w-full flex flex-col items-center justify-center gap-2 px-4 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-medium rounded-lg hover:from-red-700 hover:to-pink-700 transition-all"
-                        >
+                        <input ref="cameraVideoInput" type="file" accept="video/*" capture="environment" class="hidden"
+                          @change="handleFileSelect" />
+                        <button type="button" @click="triggerRef('cameraVideoInput')"
+                          class="w-full flex flex-col items-center justify-center gap-2 px-4 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-medium rounded-lg hover:from-red-700 hover:to-pink-700 transition-all">
                           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                            </path>
                           </svg>
                           <span class="text-sm">Grabar Video</span>
                         </button>
@@ -90,21 +78,14 @@
                     <!-- Galería de fotos -->
                     <div class="text-center">
                       <label class="block mb-2">
-                        <input
-                          ref="galleryPhotoInput"
-                          type="file"
-                          accept="image/*"
-                          class="hidden"
-                          @change="handleFileSelect"
-                          multiple
-                        />
-                        <button
-                          type="button"
-                          @click="$refs.galleryPhotoInput.click()"
-                          class="w-full flex flex-col items-center justify-center gap-2 px-4 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all"
-                        >
+                        <input ref="galleryPhotoInput" type="file" accept="image/*" class="hidden"
+                          @change="handleFileSelect" multiple />
+                        <button type="button" @click="triggerRef('galleryPhotoInput')"
+                          class="w-full flex flex-col items-center justify-center gap-2 px-4 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-medium rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all">
                           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
                           </svg>
                           <span class="text-sm">Fotos</span>
                         </button>
@@ -115,22 +96,16 @@
                     <!-- Galería de videos -->
                     <div class="text-center">
                       <label class="block mb-2">
-                        <input
-                          ref="galleryVideoInput"
-                          type="file"
-                          accept="video/*"
-                          class="hidden"
-                          @change="handleFileSelect"
-                          multiple
-                        />
-                        <button
-                          type="button"
-                          @click="$refs.galleryVideoInput.click()"
-                          class="w-full flex flex-col items-center justify-center gap-2 px-4 py-4 bg-gradient-to-r from-orange-600 to-yellow-600 text-white font-medium rounded-lg hover:from-orange-700 hover:to-yellow-700 transition-all"
-                        >
+                        <input ref="galleryVideoInput" type="file" accept="video/*" class="hidden"
+                          @change="handleFileSelect" multiple />
+                        <button type="button" @click="triggerRef('galleryVideoInput')"
+                          class="w-full flex flex-col items-center justify-center gap-2 px-4 py-4 bg-gradient-to-r from-orange-600 to-yellow-600 text-white font-medium rounded-lg hover:from-orange-700 hover:to-yellow-700 transition-all">
                           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                           </svg>
                           <span class="text-sm">Videos</span>
                         </button>
@@ -145,19 +120,25 @@
                     <ul class="text-xs text-blue-700 space-y-1">
                       <li class="flex items-center">
                         <svg class="w-3 h-3 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                          <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
                         </svg>
                         Fotos: máximo 5MB cada una
                       </li>
                       <li class="flex items-center">
                         <svg class="w-3 h-3 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                          <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
                         </svg>
                         Videos: máximo 250MB cada uno
                       </li>
                       <li class="flex items-center">
                         <svg class="w-3 h-3 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                          <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
                         </svg>
                         Máximo 10 archivos en total
                       </li>
@@ -174,13 +155,12 @@
                         {{ formatTotalSize() }} / 250MB
                       </span>
                     </h4>
-                    <button
-                      type="button"
-                      @click="clearAllFiles"
-                      class="text-sm text-red-600 hover:text-red-800 flex items-center gap-1"
-                    >
+                    <button type="button" @click="clearAllFiles"
+                      class="text-sm text-red-600 hover:text-red-800 flex items-center gap-1">
                       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+                        </path>
                       </svg>
                       Limpiar todo
                     </button>
@@ -188,19 +168,21 @@
 
                   <!-- Lista de archivos -->
                   <div class="space-y-2 max-h-60 overflow-y-auto p-2 bg-gray-50 rounded-lg">
-                    <div
-                      v-for="(file, index) in selectedFiles"
-                      :key="index"
-                      class="flex items-center justify-between p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors"
-                    >
+                    <div v-for="(file, index) in selectedFiles" :key="index"
+                      class="flex items-center justify-between p-3 bg-white rounded-lg border border-gray-200 hover:border-blue-300 transition-colors">
                       <div class="flex items-center gap-3 flex-1 min-w-0">
                         <!-- Icono según tipo -->
                         <div :class="getFileTypeClass(file)">
-                          <svg v-if="file.type.startsWith('image/')" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                          <svg v-if="file.type.startsWith('image/')" class="w-5 h-5" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
+                            </path>
                           </svg>
                           <svg v-else class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
+                            </path>
                           </svg>
                         </div>
 
@@ -223,28 +205,26 @@
                       <!-- Acciones -->
                       <div class="flex items-center gap-2">
                         <!-- Vista previa -->
-                        <button
-                          v-if="file.preview && file.type.startsWith('image/')"
-                          type="button"
+                        <button v-if="file.preview && file.type.startsWith('image/')" type="button"
                           @click="previewFile(index)"
                           class="p-1.5 text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded transition-colors"
-                          title="Ver vista previa"
-                        >
+                          title="Ver vista previa">
                           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-weight="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-weight="2"
+                              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                            </path>
                           </svg>
                         </button>
 
                         <!-- Eliminar -->
-                        <button
-                          type="button"
-                          @click="removeFile(index)"
+                        <button type="button" @click="removeFile(index)"
                           class="p-1.5 text-red-600 hover:text-red-800 hover:bg-red-50 rounded transition-colors"
-                          title="Eliminar archivo"
-                        >
+                          title="Eliminar archivo">
                           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M6 18L18 6M6 6l12 12"></path>
                           </svg>
                         </button>
                       </div>
@@ -258,40 +238,31 @@
                       <span>{{ formatTotalSize() }} / 250MB</span>
                     </div>
                     <div class="w-full bg-gray-200 rounded-full h-2">
-                      <div
-                        class="bg-green-500 h-2 rounded-full transition-all duration-300"
-                        :style="{ width: `${(totalSize / (250 * 1024 * 1024)) * 100}%` }"
-                      ></div>
+                      <div class="bg-green-500 h-2 rounded-full transition-all duration-300"
+                        :style="{ width: `${(totalSize / (250 * 1024 * 1024)) * 100}%` }"></div>
                     </div>
                   </div>
                 </div>
 
                 <!-- Modal de previsualización -->
-                <div v-if="previewIndex !== null" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75">
+                <div v-if="previewIndex !== null"
+                  class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-75">
                   <div class="relative bg-white rounded-lg max-w-4xl max-h-[80vh] overflow-hidden">
-                    <button
-                      @click="previewIndex = null"
-                      class="absolute top-4 right-4 z-10 p-2 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-70 transition-opacity"
-                    >
+                    <button @click="previewIndex = null"
+                      class="absolute top-4 right-4 z-10 p-2 bg-black bg-opacity-50 text-white rounded-full hover:bg-opacity-70 transition-opacity">
                       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
                       </svg>
                     </button>
 
                     <div v-if="selectedFiles[previewIndex]?.type.startsWith('image/')" class="p-4">
-                      <img
-                        :src="selectedFiles[previewIndex]?.preview"
-                        alt="Vista previa"
-                        class="max-w-full max-h-[70vh] object-contain mx-auto"
-                      />
+                      <img :src="selectedFiles[previewIndex]?.preview" alt="Vista previa"
+                        class="max-w-full max-h-[70vh] object-contain mx-auto" />
                     </div>
 
                     <div v-else-if="selectedFiles[previewIndex]?.type.startsWith('video/')" class="p-4">
-                      <video
-                        :src="selectedFiles[previewIndex]?.preview"
-                        controls
-                        class="max-w-full max-h-[70vh]"
-                      >
+                      <video :src="selectedFiles[previewIndex]?.preview" controls class="max-w-full max-h-[70vh]">
                         Tu navegador no soporta la reproducción de videos.
                       </video>
                     </div>
@@ -303,14 +274,9 @@
                   <label class="block text-sm font-medium text-gray-700 mb-2">
                     Mensaje (opcional)
                   </label>
-                  <textarea
-                    v-model="message"
-                    :maxlength="500"
+                  <textarea v-model="message" :maxlength="500"
                     class="w-full text-black px-4 py-3 border border-gray-300 rounded-lg focus:ring-1 focus:ring-blue-700 focus:border-blue-700 resize-none"
-                    placeholder="Comparte un mensaje con tus archivos..."
-                    rows="3"
-                    :disabled="isLoading"
-                  ></textarea>
+                    placeholder="Comparte un mensaje con tus archivos..." rows="3" :disabled="isLoading"></textarea>
                   <div class="text-right mt-1">
                     <span class="text-xs text-gray-500">{{ message.length }}/500</span>
                   </div>
@@ -326,37 +292,35 @@
                     <span>{{ uploadProgress }}%</span>
                   </div>
                   <div class="w-full bg-gray-200 rounded-full h-2">
-                    <div
-                      class="bg-green-500 h-2 rounded-full transition-all duration-300"
-                      :style="{ width: `${uploadProgress}%` }"
-                    ></div>
+                    <div class="bg-green-500 h-2 rounded-full transition-all duration-300"
+                      :style="{ width: `${uploadProgress}%` }"></div>
                   </div>
                 </div>
 
-                <button
-                  type="button"
+                <button type="button"
                   class="w-full inline-flex justify-center items-center rounded-md bg-green-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   :disabled="isLoading || selectedFiles.length === 0 || totalSize > 250 * 1024 * 1024"
-                  @click="uploadFiles"
-                >
-                  <svg v-if="isLoading" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                  @click="uploadFiles">
+                  <svg v-if="isLoading" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none"
+                    viewBox="0 0 24 24">
                     <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    <path class="opacity-75" fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                    </path>
                   </svg>
                   <span v-else class="flex items-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12">
+                      </path>
                     </svg>
                     {{ getUploadButtonText() }}
                   </span>
                 </button>
 
-                <button
-                  type="button"
+                <button type="button"
                   class="w-full inline-flex justify-center rounded-md bg-gray-200 px-3 py-2 text-sm font-semibold text-gray-700 shadow-sm hover:bg-gray-300 transition-colors"
-                  @click="closeModal"
-                  :disabled="isLoading"
-                >
+                  @click="closeModal" :disabled="isLoading">
                   Cancelar
                 </button>
               </div>
@@ -369,7 +333,7 @@
 </template>
 
 <script lang="ts">
-import axios from 'axios'
+import axios, { AxiosError } from 'axios'
 
 interface SelectedFile {
   file: File
@@ -404,7 +368,7 @@ export default {
     }
   },
   emits: ['update:modelValue', 'close', 'upload-success'],
-  data () {
+  data() {
     return {
       message: "",
       isLoading: false,
@@ -581,7 +545,7 @@ export default {
         formData.append('message', this.message.trim())
 
         // Agregar todos los archivos
-        this.selectedFiles.forEach((item, index) => {
+        this.selectedFiles.forEach((item) => {
           formData.append(`files`, item.file)
         })
 
@@ -610,13 +574,14 @@ export default {
         this.message = ''
         this.closeModal()
 
-      } catch (error: any) {
+      } catch (err: unknown) {
+        const error = err as AxiosError<{ message: string }>
         console.error("Error subiendo archivos:", error)
 
         let errorMessage = 'Hubo un error al subir los archivos.'
         if (error.response?.data?.message) {
           errorMessage = error.response.data.message
-        } else if (error.message.includes('Network Error')) {
+        } else if (error.message && error.message.includes('Network Error')) {
           errorMessage = 'Error de conexión. Verifica tu internet.'
         }
 
@@ -643,6 +608,13 @@ export default {
     handleEscapeKey(event: KeyboardEvent) {
       if (this.closeOnEscape && event.key === 'Escape' && this.modelValue) {
         this.closeModal()
+      }
+    },
+
+    triggerRef(refName: string) {
+      const element = this.$refs[refName] as HTMLInputElement | undefined
+      if (element) {
+        element.click()
       }
     }
   },
